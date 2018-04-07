@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shape grammar | Evolutionary algorithm </title>
+    <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <style>
+        svg {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        body {
+            background-color: #ffffcc;
+        }
+
+        p, button {
+            font-family: 'Kavivanar', cursive;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 10%; 
+        }
+
+        .generation {
+            border: 5px solid blue;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            align-content: center;
+        }
+
+        .individual {
+            /* border: 2px solid green; */
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="settings">
+        <p>Rozmiar osobnika:  
+            <input type="number" id="individualSize" min="3" max="20" step="1" value="20">
+        </p>
+        <p>Ilość osobników w początkowym pokoleniu:  
+            <input type="number" id="generationSize" min="3" max="50" step="1" value="20">
+        </p>
+
+        <p>Ilość pokoleń:  
+            <input type="number" id="populationSize" min="3" max="500" step="1" value="20">
+        </p>
+
+        <button id="generateBtn">Start</button>
+    </div>
+
+    <hr>
+
+    <div id="population"></div>
+
+    <script src="script1.js"></script>
+</body>
